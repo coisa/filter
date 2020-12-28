@@ -21,9 +21,9 @@ namespace CoiSA\Filter;
 interface FilterInterface
 {
     /**
-     * @param \iterable $input
+     * @param iterable $input
      *
-     * @return \iterable
+     * @return iterable
      */
-    public function filter(\iterable $input): \iterable;
+    public function filter(iterable $input): iterable;
 }

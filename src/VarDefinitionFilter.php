@@ -38,7 +38,7 @@ final class VarDefinitionFilter implements FilterInterface
     /**
      * {@inheritdoc}
      */
-    public function filter(\iterable $input): \iterable
+    public function filter(iterable $input): iterable
     {
         $data = \iterator_to_array($input);
 

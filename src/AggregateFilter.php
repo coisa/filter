@@ -38,7 +38,7 @@ final class AggregateFilter implements FilterInterface
     /**
      * {@inheritdoc}
      */
-    public function filter(\iterable $input): \iterable
+    public function filter(iterable $input): iterable
     {
         foreach ($this->filters as $filter) {
             $input = $filter->filter($input);
