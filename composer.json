@@ -1,0 +1,54 @@
+{
+    "name": "coisa/filter",
+    "description": "Filter abstraction layer",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Felipe Sayão Lobato Abreu",
+            "email": "github@felipeabreu.com.br"
+        }
+    ],
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "coisa/php-cs-fixer": "^1.0",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "phpunit/phpunit": "^9.5",
+        "sensiolabs/security-checker": "^6.0",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "CoiSA\\Filter\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoiSA\\Filter\\": "tests"
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "check": [
+            "@lint",
+            "@test",
+            "@sniff",
+            "@cs-check"
+        ],
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix",
+        "lint": "parallel-lint --exclude vendor .",
+        "sniff": "phpcs",
+        "test": "phpunit --color=always"
+    }
+}

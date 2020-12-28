@@ -1,0 +1,21 @@
+# https://docs.lando.dev/
+
+name: filter
+
+services:
+  php74:
+    type: php:7.4
+    via: cli
+    build_as_root:
+      - docker-php-ext-enable xdebug
+
+tooling:
+  php:
+    service: php74
+    description: Runs with php 7.4
+    cmd: php
+
+  composer:
+    service: php74
+    description: Runs composer with php 7.4
+    cmd: composer
