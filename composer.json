@@ -13,7 +13,7 @@
         "php": "^7.4"
     },
     "require-dev": {
-        "coisa/php-cs-fixer": "^1.0",
+        "coisa/php-cs-fixer": "^1.0 || ^2.0",
         "php-parallel-lint/php-parallel-lint": "^1.2",
         "phpunit/phpunit": "^9.5",
         "sensiolabs/security-checker": "^6.0",
